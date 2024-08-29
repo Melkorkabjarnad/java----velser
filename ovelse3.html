@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>gæt en tal</h1>
+    <p>skriv den imellem 0 til 10</p>
+    <input type="number" id="tal"/>
+    <button>Tjek tal</button>
+<script>
+    document.querySelector("button").addEventListener("click", tjekTal);
+
+    let forsoeg = 0;
+    const ranNum = Math.floor(Math.random() + 11);
+
+    function tjekTal(){
+        forsoeg++;
+        const brugerTal = document.querySelector("#tal").value;
+
+        if(ranNum > brugerTal){
+            alert("Øv" + brugerTal + "var for lavt");
+        } else if(ranNum < brugerTal){
+            alert("Øv" + brugerTal + "var for hojt");
+        }else{
+            alert(brugerTal + "er rigtig" + "du brugte" + forsoeg + "prov igen");
+            location.reload();
+        }
+        }
+</script>
+</body>
+</html>
