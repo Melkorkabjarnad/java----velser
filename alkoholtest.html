@@ -11,6 +11,14 @@
     <img src="img/cola.png" alt="cola" onclick="checkDrink(this)">
     <img src="img/sprite.png" alt="sprite" onclick="checkDrink(this)">
 
-    <script src="ovelse1.js"></script>
+    <script>
+        function checkDrink(element){
+    if (element.alt === "beer" || element.alt === "snaps"){
+        console.log("Indeholder Alkohol");
+    } else{
+        console.log("Alkoholfri");
+    }
+}
+    </script>
 </body>
 </html>
